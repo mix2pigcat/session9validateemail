@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset=utf-8 />
+    <title>Hello</title>
+</head>
+<body>
+<div>
+    <h1>kiem tra </h1>
+    nhap email: <input  type="text" id="inp" />
+    <button type="button" onclick="getData()">submit</button>
+</div>
+<script>
+    function getData() {
+        var string = document.getElementById('inp').value;
+        let result = check(string);
+    }
+    function check(str){
+        let regexp = /^[A-Za-z0-9]+[A-Za-z0-9]*@[A-Za-z0-9]+(\.[A-Za-z0-9]+)$/;
+        if (regexp.test(str)) {
+            alert("Email hop le!");
+        } else {
+            alert("Email khong hop le!");
+        }
+    }
+</script>
+</body>
+</html>
